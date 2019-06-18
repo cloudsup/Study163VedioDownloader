@@ -47,8 +47,8 @@ class Study163LessonInfoScraber(object):
                 if chapter_item:
                     self.add_chapter_to_list()
 
-                    chapter_number = chapter_item(".chaptericon").text()
-                    chapter_name = chapter_item(".chaptername").text()
+                    self.chapter_number = chapter_item(".chaptericon").text()
+                    self.chapter_name = chapter_item(".chaptername").text()
                     self.lesson_info_list.clear()
                 elif lesson_item:
                     lesson_id = lesson_item.attr("data-id")
